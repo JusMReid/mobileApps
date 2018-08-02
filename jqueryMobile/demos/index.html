@@ -11,69 +11,128 @@
 	<script src="js/jquery.js"></script>
 	<script src="_assets/js/index.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+	<style media="screen">
+		.hiddenContent{
+			display: none;
+		}
+	</style>
 </head>
 <body>
-<div data-role="page" class="jqm-demos jqm-home">
+	<div data-role="page" class="jqm-demos jqm-home">
 
-	<div data-role="header" class="jqm-header">
-		<h2>Jay's App</h2>
+		<div data-role="header" class="jqm-header">
+			<h2>Jay's App</h2>
 
-		<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
-		<a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a>
-	</div><!-- /header -->
+			<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+			<a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a>
+		</div><!-- /header -->
 
-	<div role="main" class="ui-content jqm-content">
+		<!-- MAIN CONTENT -->
+		<div role="main" class="ui-content jqm-content" id="mainContent">
 
-		<h1>Demos</h1>
+			<h1>My Awesome App</h1>
 
-		<p><strong>jQuery Mobile is a touch-optimized HTML5 UI framework designed to make responsive web sites and apps that are accessible on all smartphone, tablet and desktop devices.</strong></p>
+			<p><strong>Here is where I tell users what makes this app so awesome. Maybe what they can expect. etc,...</strong></p>
 
 
-	</div><!-- /content -->
+		</div><!-- /content -->
 
-	    <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
-	    	<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
-<li data-filtertext="demos homepage" data-icon="home"><a href=".././">Home</a></li>
-<li data-filtertext="introduction overview getting started"><a href="../intro/" data-ajax="false">Introduction</a></li>
-<li data-filtertext="buttons button markup buttonmarkup method anchor link button element"><a href="../button-markup/" data-ajax="false">Buttons</a></li>
-<li data-filtertext="form button widget input button submit reset"><a href="../button/" data-ajax="false">Button widget</a></li>
-<li data-role="collapsible" data-enhanced="true" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right" data-inset="false" class="ui-collapsible ui-collapsible-themed-content ui-collapsible-collapsed">
-	<h3 class="ui-collapsible-heading ui-collapsible-heading-collapsed">
-		<a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-right ui-btn-inherit ui-icon-carat-d">
-		    Checkboxradio widget<span class="ui-collapsible-heading-status"> click to expand contents</span>
-		</a>
-	</h3>
-	<div class="ui-collapsible-content ui-body-inherit ui-collapsible-content-collapsed" aria-hidden="true">
-		<ul>
-			<li data-filtertext="form checkboxradio widget checkbox input checkboxes controlgroups"><a href="../checkboxradio-checkbox/" data-ajax="false">Checkboxes</a></li>
-			<li data-filtertext="form checkboxradio widget radio input radio buttons controlgroups"><a href="../checkboxradio-radio/" data-ajax="false">Radio buttons</a></li>
-		</ul>
+		    <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
+		    	<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+						<li class="contentUpdate" data-filtertext="demos homepage" data-icon="home" data-ajax="false"><a href="#home">Home</a></li>
+
+						<li data-role="collapsible" data-enhanced="true" data-collapsed-icon="carat-d"
+								data-expanded-icon="carat-u" data-iconpos="right" data-inset="false" class="ui-collapsible ui-collapsible-themed-content ui-collapsible-collapsed" data-collapsed="false">
+							<h3 class="ui-collapsible-heading ui-collapsible-heading-collapsed">
+								<a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-right ui-btn-inherit
+										ui-icon-carat-d">Chapter 1<span class="ui-collapsible-heading-status"> click to expand contents</span>
+								</a>
+							</h3>
+
+							<div class="ui-collapsible-content ui-body-inherit ui-collapsible-content-collapsed"
+									aria-hidden="true">
+
+								<ul>
+									<li data-filtertext="" class="contentUpdate"><a href="#1-1" >Part 1</a></li>
+									<li data-filtertext="" class="contentUpdate"><a href="#1-2" >Part 2</a></li>
+								</ul>
+							</div>
+
+						</li>
+
+
+			     </ul>
+			</div><!-- /panel -->
+
+
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
+			<p>Footer Content</p>
+		</div><!-- /footer -->
+		<!-- TODO: This should become an external panel so we can add input to markup (unique ID) -->
+	    <div data-role="panel" class="jqm-search-panel" data-position="right" data-display="overlay" data-theme="a">
+			<div class="jqm-search">
+				<ul class="jqm-list" data-filter-placeholder="Search content..." data-filter-reveal="true">
+
+					<li class="contentUpdate" data-filtertext="demos homepage" data-icon="home" data-ajax="false"><a href="#home">Home</a></li>
+
+					<li data-role="collapsible" data-enhanced="true" data-collapsed-icon="carat-d"
+							data-expanded-icon="carat-u" data-iconpos="right" data-inset="false" class="ui-collapsible ui-collapsible-themed-content ui-collapsible-collapsed" data-collapsed="false">
+						<h3 class="ui-collapsible-heading ui-collapsible-heading-collapsed">
+							<a href="#" class="ui-collapsible-heading-toggle ui-btn ui-btn-icon-right ui-btn-inherit
+									ui-icon-carat-d">Chapter 1<span class="ui-collapsible-heading-status"> click to expand contents</span>
+							</a>
+						</h3>
+
+						<div class="ui-collapsible-content ui-body-inherit ui-collapsible-content-collapsed"
+								aria-hidden="true">
+							<ul>
+								<li data-filtertext="" class="contentUpdate"><a href="#1-1" >Part 1</a></li>
+								<li data-filtertext="" class="contentUpdate"><a href="#1-2" >Part 2</a></li>
+							</ul>
+						</div>
+					</li>
+
+
+				</ul>
+			</div>
+		</div><!-- /Search panel -->
+
+
+	</div><!-- /page -->
+
+	<div class="hiddenContent home">
+		<h1>My Awesome App</h1>
+
+		<p><strong>Here is where I tell users what makes this app so awesome. Maybe what they can expect. etc,...</strong></p>
 	</div>
-</li>
+
+	<div class="hiddenContent 1-1">
+		<iframe width="100%" height="315" src="https://www.youtube.com/embed/ZKyToaaM0xw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+		<h2>Ch 1, Pt. 1</h2>
+		<p>Introductuion video</p>
+	</div>
+
+	<div class="hiddenContent 1-2">
+		Test Content 2
+	</div>
+
+	<script type="text/javascript">
+		//alert(location);
+		//Jquery mobile provides a vclick methos which elimates event lag on mobile i.e, vclick isntead of click
+		$(".contentUpdate").click(function() {
+			/* Act on the event */
+			//alert("asdfsas")
+			var newClass = $(this).children().attr('href').substring(1);
+
+			var newContent = $("."+newClass).html();
+			$("#mainContent").html(newContent);
+
+		});
 
 
-		     </ul>
-		</div><!-- /panel -->
 
-
-	<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
-		<p>Footer Content</p>
-	</div><!-- /footer -->
-	<!-- TODO: This should become an external panel so we can add input to markup (unique ID) -->
-    <div data-role="panel" class="jqm-search-panel" data-position="right" data-display="overlay" data-theme="a">
-		<div class="jqm-search">
-			<ul class="jqm-list" data-filter-placeholder="Search demos..." data-filter-reveal="true">
-				<li data-filtertext="demos homepage" data-icon="home"><a href=".././">Home</a></li>
-				<li data-filtertext="introduction overview getting started"><a href="../intro/" data-ajax="false">Introduction</a></li>
-				<li data-filtertext="buttons button markup buttonmarkup method anchor link button element"><a href="../button-markup/" data-ajax="false">Buttons</a></li>
-				<li data-filtertext="form button widget input button submit reset"><a href="../button/" data-ajax="false">Button widget</a></li>
-
-			</ul>
-		</div>
-	</div><!-- /panel -->
-
-
-</div><!-- /page -->
-
+	</script>
 </body>
 </html>
